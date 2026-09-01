@@ -76,8 +76,22 @@ a{
 
 <p class="price">10.5 د.ك</p>
 
-<a href="cart.html?product=black" class="buy">إضافة إلى السلة</a>
+<button class="buy" onclick="addToCart()">إضافة إلى السلة</button>
 
+<script>
+function addToCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name: "AVOR أسود",
+        price: 10.5
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.location.href = "cart.html";
+}
+</script>
 <br>
 
 <a href="index.html">الرجوع للرئيسية</a>
