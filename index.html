@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>AVOR</title>
 
 <style>
 
@@ -11,11 +12,11 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Tahoma,sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f1ea;
+background:#f8f5ef;
 color:#222;
 }
 
@@ -32,36 +33,23 @@ object-fit:cover;
 }
 
 .overlay{
-    position:absolute;
-    top:40%;
-    left:8%;
-    transform:translateY(-50%);
-    z-index:10;
-    color:white;
-}
-
-.logo{
-font-size:80px;
-letter-spacing:10px;
-font-weight:bold;
-margin-bottom:15px;
-}
-
-.slogan{
-font-size:32px;
-margin-bottom:35px;
+position:absolute;
+left:8%;
+bottom:15%;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
 }
 
 .button{
-display:inline-block;
-padding:16px 40px;
 background:#111;
 color:#fff;
+padding:16px 42px;
 text-decoration:none;
 border-radius:50px;
 font-size:20px;
 transition:.3s;
-  margin-top:30px;
 }
 
 .button:hover{
@@ -69,83 +57,70 @@ background:#444;
 }
 
 .products{
-padding:80px 10%;
-background:#fff;
-text-align:center;
+padding:80px 8%;
+background:white;
 }
 
 .products h2{
-font-size:45px;
+text-align:center;
+font-size:42px;
 margin-bottom:50px;
 }
 
-.cards{
-display:flex;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-justify-content:center;
-flex-wrap:wrap;
 }
 
 .card{
-width:300px;
-border-radius:18px;
+background:#fff;
+border-radius:20px;
 overflow:hidden;
-background:#fafafa;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-8px);
 }
 
 .card img{
 width:100%;
-height:320px;
-object-fit:cover;
+display:block;
 }
 
 .card h3{
-padding:20px 0 10px;
-font-size:25px;
+margin-top:20px;
+font-size:28px;
 }
 
-.card p{
-font-size:22px;
-margin-bottom:20px;
+.price{
+font-size:24px;
+margin:15px 0;
+font-weight:bold;
 }
 
 .buy{
 display:inline-block;
 margin-bottom:25px;
-padding:12px 30px;
-background:#111;
-color:#fff;
+padding:14px 35px;
+background:black;
+color:white;
 text-decoration:none;
-border-radius:30px;
+border-radius:40px;
 }
 
 footer{
 background:#111;
-color:#fff;
-padding:35px;
+color:white;
 text-align:center;
-margin-top:70px;
-}
-
-@media(max-width:900px){
-
-.logo{
-font-size:55px;
-}
-
-.slogan{
-font-size:24px;
-}
-
-.hero{
-height:70vh;
-}
-
+padding:35px;
+margin-top:60px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -156,25 +131,7 @@ height:70vh;
 
 <div class="overlay">
 
-
-
-<div class="welcome">
-  <h1>AVOR</h1>
-    <h2>مرحباً بك في AVOR</h2>
-</div>
-  
-</div>    
-
-
-<div class="slogan">
-    هدية ترندي 🤍 KW
-</div>
-
-<a class="button" href="#products">تسوق الآن</a>
-
-</div>
-
-<a class="button" href="#products">
+<a href="#products" class="button">
 تسوق الآن
 </a>
 
@@ -184,39 +141,35 @@ height:70vh;
 
 <section class="products" id="products">
 
-<h2>منتجاتنا</h2>
+<h2>منتجات AVOR</h2>
 
-<div class="cards">
-
-<div class="card">
-<img src="white.jpg">
-<h3>تيشيرت أبيض</h3>
-<p>12 KWD</p>
-<a class="buy" href="#">اطلب الآن</a>
+<div class="grid">
+    <div class="card">
+    <img src="white.jpg" alt="AVOR White">
+    <h3>تيشيرت AVOR أبيض</h3>
+    <div class="price">10.5 د.ك</div>
+    <a href="#" class="buy">شراء</a>
 </div>
 
 <div class="card">
-<img src="black.jpg">
-<h3>تيشيرت أسود</h3>
-<p>12 KWD</p>
-<a class="buy" href="#">اطلب الآن</a>
+    <img src="black.jpg" alt="AVOR Black">
+    <h3>تيشيرت AVOR أسود</h3>
+    <div class="price">10.5 د.ك</div>
+    <a href="#" class="buy">شراء</a>
 </div>
 
 <div class="card">
-<img src="gray.jpg">
-<h3>تيشيرت رمادي</h3>
-<p>12 KWD</p>
-<a class="buy" href="#">اطلب الآن</a>
+    <img src="gray.jpg" alt="AVOR Gray">
+    <h3>تيشيرت AVOR رمادي</h3>
+    <div class="price">10.5 د.ك</div>
+    <a href="#" class="buy">شراء</a>
 </div>
 
 </div>
-
 </section>
 
 <footer>
-
-© 2026 AVOR جميع الحقوق محفوظة
-
+© 2026 AVOR - جميع الحقوق محفوظة
 </footer>
 
 </body>
