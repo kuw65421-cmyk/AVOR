@@ -102,13 +102,26 @@ a{
 
 <br><br>
 
-<a href="cart.html?product=gray" class="buy">إضافة إلى السلة</a>
+<button class="buy" onclick="addToCart()">إضافة إلى السلة</button>
 
 <br>
 
 <a href="index.html">الرجوع للرئيسية</a>
 
 </div>
+<script>
+function addToCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+    cart.push({
+        name: "AVOR رمادي",
+        price: 10.5
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.location.href = "cart.html";
+}
+</script>
 </body>
 </html>
